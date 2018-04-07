@@ -10,8 +10,8 @@
         <input type="text" id="input" style="width: 500px" />
         <br />
 
-        <input type="radio" name="case" id="camel" checked="checked" /> camel
-        <input type="radio" name="case" id="pascal" /> Pascal        
+        <input type="radio" name="case" id="camel" checked="checked" /> <label for="camel">camel</label>
+        <input type="radio" name="case" id="pascal" /> <label for="pascal">Pascal</label>
 
         <button id="convert">Convert</button>
     </p>
@@ -23,6 +23,7 @@
     <script>
         performConversion = function () {
             var input = document.getElementById("input").value;
+            input = input.replace(/\W/g, ' '); // remove non alfanumeric
             var inputLen = input.length;
 
             var camel = document.getElementById("camel").checked;
