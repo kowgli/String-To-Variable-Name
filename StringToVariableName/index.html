@@ -47,6 +47,9 @@
                     if (afterSpace) {
                         char = char.toUpperCase();
                     }
+                    else if(i > 0) {
+                        char = char.toLowerCase();
+                    }
 
                     output += char;
                     afterSpace = false;
